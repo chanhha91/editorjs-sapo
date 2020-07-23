@@ -1,0 +1,30 @@
+.ce-sapo {
+  line-height: 1.6em;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.ce-sapo[data-placeholder]:empty::before{
+  content: attr(data-placeholder);
+  color: #707684;
+  font-weight: normal;
+}
+
+/** Show placeholder at the first paragraph if Editor is empty */
+.codex-editor--empty .ce-block:first-child .ce-sapo[data-placeholder]:empty::before {
+  opacity: 1;
+}
+
+.codex-editor--toolbox-opened .ce-block:first-child .ce-sapo[data-placeholder]:empty::before,
+.codex-editor--empty .ce-block:first-child .ce-sapo[data-placeholder]:empty:focus::before {
+  opacity: 0;
+}
+
+.ce-sapo p:first-of-type{
+    margin-top: 0;
+}
+
+.ce-sapo p:last-of-type{
+    margin-bottom: 0;
+}
